@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1686009510 source:c:\users\winny\documents\c++\programme\journalier\application.cpp
+
+1686009837 source:c:\users\winny\documents\c++\programme\journalier\journalier.cpp
+	"journalier.h"
+	<iostream>
+	<string>
+
+1686009733 c:\users\winny\documents\c++\programme\journalier\journalier.h
+	<iostream>
+	<string>
+

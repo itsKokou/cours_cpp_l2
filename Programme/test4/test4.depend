@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1687385147 source:c:\users\winny\documents\c++\programme\test4\app.cpp
+	<iostream>
+	<string>
+	<vector>
+	"employe.h"
+	"permanent.h"
+	"journalier.h"
+
+1687384107 source:c:\users\winny\documents\c++\programme\test4\journalier.cpp
+	"employe.h"
+	"journalier.h"
+	<iostream>
+	<string>
+
+1687431829 source:c:\users\winny\documents\c++\programme\test4\permanent.cpp
+	"employe.h"
+	"permanent.h"
+	<iostream>
+	<string>
+
+1687383109 source:c:\users\winny\documents\c++\programme\test4\employe.cpp
+	"employe.h"
+	<iostream>
+	<string>
+
+1687382244 c:\users\winny\documents\c++\programme\test4\employe.h
+	<iostream>
+	<string>
+
+1687383704 c:\users\winny\documents\c++\programme\test4\permanent.h
+	"employe.h"
+	<iostream>
+	<string>
+
+1687383895 c:\users\winny\documents\c++\programme\test4\journalier.h
+	"employe.h"
+	<iostream>
+	<string>
+

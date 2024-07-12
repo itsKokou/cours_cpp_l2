@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1687431391 source:c:\users\winny\documents\c++\programme\test3 pro\etudiant.cpp
+	<string>
+	<iostream>
+	"personne.h"
+	"etudiant.h"
+
+1687431246 c:\users\winny\documents\c++\programme\test3 pro\personne.h
+	<string>
+	<iostream>
+
+1687392027 c:\users\winny\documents\c++\programme\test3 pro\etudiant.h
+	<string>
+	<iostream>
+	"personne.h"
+
+1687392162 source:c:\users\winny\documents\c++\programme\test3 pro\app.cpp
+	<string>
+	<iostream>
+	"personne.h"
+	"etudiant.h"
+	<vector>
+
+1687431391 source:c:\users\winny\documents\c++\programme\test3 pro\personne.cpp
+	<string>
+	<iostream>
+	"personne.h"
+

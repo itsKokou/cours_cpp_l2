@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1685029417 source:c:\users\winny\documents\c++\programme\projet1\application.cpp
+	"point.h"
+	<iostream>
+
+1685029417 c:\users\winny\documents\c++\programme\projet1\point.h
+	<iostream>
+

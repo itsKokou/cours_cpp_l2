@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1687364067 source:c:\users\winny\documents\c++\programme\test1\etudiant.cpp
+	<iostream>
+	<string>
+	"etudiant.h"
+
+1687363937 source:c:\users\winny\documents\c++\programme\test1\app.cpp
+	<iostream>
+	<string>
+	"etudiant.h"
+	<vector>
+
+1687363715 c:\users\winny\documents\c++\programme\test1\etudiant.h
+	<iostream>
+	<string>
+

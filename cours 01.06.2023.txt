@@ -1,0 +1,493 @@
+// classe journalier.h
+
+#ifndef JOURNALIER_H
+
+#define JOURNALIER_H
+
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+class journalier
+
+{
+
+private:
+
+string matr;
+
+string nom;
+
+string prenom;
+
+int nh;
+
+int th;
+
+
+
+public:
+
+journalier();
+
+void afficher();
+
+void salaire();
+
+};
+
+#endif // VOITURE_H
+
+Appuyez sur Maj+Tab pour accéder à l'historique des messages de chat.
+
+
+
+
+
+// fichier journalier.cpp
+
+#include "journalier.h"
+
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+
+
+journalier::journalier()
+
+{
+
+   cout<<"Code?"<<endl;
+
+   getline(cin,matr);
+
+   cout<<"Nom?"<<endl;
+
+   getline(cin,nom);
+
+   cout<<"Prenom?"<<endl;
+
+   getline(cin,prenom);
+
+   cout<<"Nombre d'heures?"<<endl;
+
+   cin>>nh;
+
+   cout<<"Taux horaire?"<<endl;
+
+   cin>>th;
+
+
+
+
+
+}
+
+void journalier::afficher()
+
+{
+
+   cout<<"Code Journalier:"<<matr<<endl;
+
+   cout<<"Nom:"<<nom<<endl;
+
+   cout<<"Prenom:"<<prenom<<endl;
+
+   cout<<"Nombre d'heures:"<<nh<<endl;
+
+   cout<<"Taux horaire:"<<th<<endl;
+
+}
+
+
+
+void journalier::salaire()
+
+{
+
+   cout<<"Salaire:"<<(nh*th)<<endl;
+
+}
+
+Appuyez sur Maj+Tab pour accéder à l'historique des messages de chat.
+
+
+//application.cpp
+
+#include "journalier.h"
+
+#include <iostream>
+
+#include <string>
+
+#include <vector>
+
+using namespace std;
+
+int main()
+
+{
+
+int choix=0;
+
+vector<journalier> liste;
+
+
+
+do
+
+{
+
+cout<<"1.ajouter un journalier"<<endl;
+
+cout<<"2.afficher les journaliers"<<endl;
+
+cout<<"3.Sortie"<<endl;
+
+cout<<" Votre choix?"<<endl;
+
+cin>>choix;
+
+cin.get();
+
+switch(choix)
+
+{
+
+case 1:
+
+{
+
+ journalier j;
+
+ liste.push_back(j);
+
+}
+
+break;
+
+case 2:
+
+for (int i=0;i<liste.size();i++)
+
+{
+
+cout<<"_______________________"<<endl;
+
+liste[i].afficher();
+
+liste[i].salaire();
+
+}
+
+cout<<"_______________________"<<endl;
+
+break;
+
+case 3:
+
+  break;
+
+default:
+
+   cout <<"choix invalide"<<endl;
+
+break;
+
+}
+
+}
+
+while(choix!=3);
+
+cout <<"Fin du programme "<<endl;
+
+return 0;
+
+}
+
+
+
+
+
+/*
+
+1/déclaration variable statique
+
+type nom_variable_statique;
+
+ou
+
+type nom_variable_statique=valeur;
+
+
+
+2/ Soit v une variable statique quelconque,
+
+l'expression &v représente l'adresse de v en
+
+mémoire
+
+int x;
+
+printf("valeur de x?\n");
+
+scanf("%d",&x);
+
+
+
+3/ déclaration d'un pointeur
+
+ type * nom_variable_pointeur;
+
+
+
+4/ pas d'adresse à la déclaration d'un pointeur
+
+
+
+5/ Un pointeur doit être initialisé ,posséder une
+
+adresse mémoire propre pour un accès de la cellule
+
+en lecture ou écriture
+
+
+
+6/ Initialision d'un pointeur
+
+ 6-1/ Initialisation via l'adresse
+
+  d'une variable statique
+
+   type x=valeur; // x-statique
+
+   type * k; // k - pointeur non initialisé
+
+
+
+   k=x; //incorrecte
+
+
+
+   k=&x; // correct k recoit l'adresse de x
+
+
+
+   on peut accèder à la valeur de x soit par
+
+   x lui même ou par le ponteur k via
+
+   l'expression *k
+
+
+
+   6-2/ Demande d'allocation mémoire à
+
+   l'OS via le pointeur avec new
+
+   nom-pointeur = new type;
+
+   * en abscence d'espace mémoire le pointeur
+
+     a la valeur NULL
+
+   * s'il y a espace,le pointeur recoit l'adressse de
+
+   cet espace et on peut alors y stocker une valeur
+
+
+
+
+
+   7/ Demande d'allocation pour n valeurs
+
+   donc un tableau dynamique
+
+   nom_pointeur= new type[n];
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+   cout<<"cas 6-1 du commentaire"<<endl;
+
+   int x=16;
+
+   int *k;
+
+   k=&x;
+
+   cout<<"valeur de x methode 1 "<<x<<endl;
+
+   cout<<"valeur de x methode 2 "<<*k<<endl;
+
+   cout<<"adresse de x methode 1 "<<&x<<endl;
+
+   cout<<"adresse de x methode 2 "<<k<<endl;
+
+
+
+   int * q;
+
+   cout<<"cas 6-2 du commentaire"<<endl;
+
+   q=new int;
+
+   do
+
+   {
+
+   q=new int;
+
+   if (q==NULL)
+
+       cout<<"pas d'espace mémoire mémoire"<<endl;
+
+   else
+
+   {
+
+       cout<<"adresse de l'espace rserve:"<<q<<endl;
+
+       cout<<"Donnez un entier à y stocker"<<endl;
+
+       cin>>*q;
+
+       cout<<"Votre entier:"<<*q<<endl;
+
+   }
+
+   }
+
+   while(q==NULL);
+
+
+
+
+
+   cout<<"demande d'allocation pour un tableau dynamique"<<endl;
+
+
+
+   int * tableau;
+
+   int taille;
+
+
+
+   cout<<"Donnez la taille du tableau"<<endl;
+
+   cin>>taille;
+
+
+
+
+
+   do
+
+   {
+
+      tableau = new int[taille];
+
+      if(tableau==NULL)
+
+           cout<<"pas d'espace mémoire mémoire"<<endl;
+
+   }
+
+   while(tableau==NULL);
+
+   cout <<"Saisie du tableau"<<endl;
+
+   for (int i=0;i<taille;i++)
+
+   {
+
+       cout<<"Donnez l'element en position "<<(i+1)<<endl;
+
+       cin >>tableau[i];
+
+   }
+
+
+
+   cout <<"méthode 1: Affichage du tableau et des adresses des elements"<<endl;
+
+   for (int i=0;i<taille;i++)
+
+   {
+
+       cout<<"valeur:"<<tableau[i]<<" adresse:"<<&tableau[i]<<endl;
+
+
+
+   }
+
+
+
+   cout <<"méthode 2: Affichage du tableau et des adresses des elements"<<endl;
+
+   for (int i=0;i<taille;i++)
+
+   {
+
+       cout<<"valeur:"<<*(tableau+i)<<" adresse:"<<(tableau+i)<<endl;
+
+
+
+   }
+
+
+
+   return 0;
+
+
+
+
+
+}
+
+ 
+
+jets statiques
+
+point p1;
+
+point p2(5,6)
+
+p1.getx()
+
+p1.gety()
+
+objets dynamiques
+
+int * p = new int; // allocation un entier
+
+point * p1= new point // allocation pour un objet point
+
+point * p2 = new point(5,6);
+
+p1->getx()
+
+p1->gety() 
+
+p2->getx()
+
+Appuyez sur Maj+Tab pour accéder à l'historique des messages de chat.
+
+
+
+
+
